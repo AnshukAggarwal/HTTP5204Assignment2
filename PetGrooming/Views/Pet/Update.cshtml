@@ -1,0 +1,15 @@
+﻿@model PetGrooming.Models.Pet
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update Details For @Model.PetName</h2>
+<a href="/Pet/List">Back to List</a>
+<form method="post" action="/Pet/Update/@Model.PetID">
+    Pet Name: <input id="PetName" name="PetName" value="@Model.PetName" /><br/>
+    Pet Color: <input id="PetColor" name="PetColor" value="@Model.Color" /><br/>
+    Weight: <input id="PetWeight" name="PetWeight" value="@Model.Weight" /><br/>
+    Notes: <textarea id="PetNotes" name="PetNotes">@Model.Notes</textarea><br/>
+    <input type="submit" id="submit" value="Update Pet" />
+</form>
+
